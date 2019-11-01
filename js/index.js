@@ -6,10 +6,12 @@ navLinks.forEach(link => {
   link.addEventListener("mouseover", () => {
     link.style.transform = "scale(1,2)";
     link.style.transition = "all 0.1s";
+    event.preventDefault();
   });
   link.addEventListener("mouseleave", () => {
     link.style.transform = "scale(1,1)";
     link.style.transition = "all 0.1s";
+    event.preventDefault();
   });
 });
 
@@ -72,4 +74,11 @@ images.forEach(image => {
     image.src = "#";
     image.alt = "NO MORE IMAGES!! MAHAHAHA";
   });
+});
+
+const headingOne = document.querySelector("h2");
+headingOne.addEventListener("click", event => {
+  headingOne.style.backgroundColor = "hotpink";
+  console.log("start");
+  event.stopPropagation();
 });
