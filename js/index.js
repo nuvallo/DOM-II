@@ -15,7 +15,7 @@ navLinks.forEach(link => {
 
 // Logo
 const logoHeading = document.querySelector(".logo-heading");
-logoHeading.addEventListener("click", () => {
+logoHeading.addEventListener("wheel", () => {
   logoHeading.textContent = "Ugly Bus";
 });
 
@@ -50,8 +50,26 @@ buttons.forEach(btn => {
   });
 });
 
+// body resize
 const body = document.querySelector("body");
 window.addEventListener("resize", () => {
   (body.style = "display: none;"),
     document.write("HAHA! Now you have to refresh xD");
+});
+
+// Paragraphs
+const paragraphs = document.querySelectorAll("p");
+paragraphs.forEach(paragraph => {
+  window.addEventListener("keydown", () => {
+    paragraph.textContent = "This site doesn't need paragraphs";
+  });
+});
+
+// Images
+const images = document.querySelectorAll("img");
+images.forEach(image => {
+  image.addEventListener("drag", () => {
+    image.src = "#";
+    image.alt = "NO MORE IMAGES!! MAHAHAHA";
+  });
 });
