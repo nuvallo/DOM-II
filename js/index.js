@@ -76,6 +76,7 @@ images.forEach(image => {
   });
 });
 
+// Propogation
 const headingOne = document.querySelector("h2");
 headingOne.addEventListener("click", event => {
   headingOne.style.backgroundColor = "hotpink";
