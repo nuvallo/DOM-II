@@ -15,17 +15,11 @@ blueBlock.addEventListener("click", () => {
   greenBlock.style = "order: 3";
   pinkBlock.style = "order: 4";
   grayBlock.style = "order: 5";
-  blueBlock.addEventListener("mousedown", e => {
-    var i;
+  blueBlock.addEventListener("mousedown", () => {
     for (i = 0; i < 1000; i++) {
       blueBlock.style = `margin-left: ${i}px `;
     }
   });
-  blueBlock(
-    addEventListener("mouseup", () => {
-      blueBlock.style = "margin-left: 10px";
-    })
-  );
 });
 
 greenBlock.addEventListener("click", () => {
